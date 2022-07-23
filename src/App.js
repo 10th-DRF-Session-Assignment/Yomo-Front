@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BoardEditor from './BoardEditor';
+import BoardList from "./BoardList";
+import { useState, useRef } from "react";
 
-function App() {
+const App = () => {
+  const [data, setData] = useState([]);
+
+  const dataId = useRef(0)
+
+  const onCreate = (author, content, space) => {
+    const created_date = new Date().getTime();
+    const newItem = {
+      author, 
+      content, 
+      space,
+      created_date,
+      id : dataId.current,
+    };
+    dataId.current += 1;
+    setData([newItem, ...data]);
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BoardEditor onCreate={onCreate} />
+      <BoardList boardList={data}/>
     </div>
   );
-}
+};
 
 export default App;
