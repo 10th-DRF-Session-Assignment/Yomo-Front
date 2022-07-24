@@ -1,5 +1,5 @@
 import {useRef, useState} from "react";
-import App from "./App.css";
+import BoardWrite from "../../BoardWrite.jsx";
 
 const BoardEditor = ({onCreate}) => {
 
@@ -23,7 +23,7 @@ const BoardEditor = ({onCreate}) => {
         if(state.author.length < 1){
             authorInput.current.focus();
             return;
-        }
+        }  
 
         if(state.content.length < 5){
             contentInput.current.focus();
@@ -31,7 +31,7 @@ const BoardEditor = ({onCreate}) => {
         }
 
         onCreate(state.author, state.content, state.space);
-        alert("일기가 작성되었습니다.")
+        alert("글이 작성되었습니다.")
     }
 
     return(
