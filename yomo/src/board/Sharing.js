@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 export default function Sharing() {
 	return (
-		<div>
+		<body>
 			<h1>나눔해요</h1>
-		</div>
+		</body>
 	);
 }

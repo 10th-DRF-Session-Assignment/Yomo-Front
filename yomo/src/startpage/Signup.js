@@ -10,7 +10,7 @@ export default function SignUp() {
 
 	return (
 		<>
-			<div className="SignUpBody">
+			<body>
 				<h1>회원가입 페이지</h1>
 				<div className="LoginContainer">
 					<div className="SignUpTitle">Sign Up</div>
@@ -18,7 +18,7 @@ export default function SignUp() {
 					<input type="text" placeholder="Password"></input>
 					<button onClick={SignUpBtnClick}>Sign Up</button>
 				</div>
-			</div>
+			</body>
 		</>
 	);
 }

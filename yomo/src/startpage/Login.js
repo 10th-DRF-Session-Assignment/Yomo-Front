@@ -11,7 +11,7 @@ function Login() {
 	return (
 		<>
 			<h1>로그인 페이지</h1>
-			<div className="LoginBody">
+			<body>
 				<div className="LoginContainer">
 					<span className="LoginTitle">Login</span>
 					<div className="UserName">Username</div>
@@ -23,7 +23,7 @@ function Login() {
 
 					<Link to="/signup">회원가입</Link>
 				</div>
-			</div>
+			</body>
 		</>
 	);
 }

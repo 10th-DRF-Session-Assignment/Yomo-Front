@@ -12,21 +12,23 @@ import Start from './startpage/Start';
 const App = () => {
 	return (
 		<>
-			<div className="App">
-				<BrowserRouter>
-					<Header />
-					<div>
-						<Routes>
-							<Route path="/" element={<Start />} />
-							<Route path="/login" element={<Login />} />
-							<Route path="/signup" element={<SignUp />} />
-							<Route path="/groupbuying" element={<GroupBuying />} />
-							<Route path="/sharing" element={<Sharing />} />
-							<Route path="/friending" element={<Friending />} />
-						</Routes>
-					</div>
-				</BrowserRouter>
-			</div>
+			<body>
+				<div className="App">
+					<BrowserRouter>
+						<Header />
+						<div>
+							<Routes>
+								<Route path="/" element={<Start />} />
+								<Route path="/login" element={<Login />} />
+								<Route path="/signup" element={<SignUp />} />
+								<Route path="/groupbuying" element={<GroupBuying />} />
+								<Route path="/sharing" element={<Sharing />} />
+								<Route path="/friending" element={<Friending />} />
+							</Routes>
+						</div>
+					</BrowserRouter>
+				</div>
+			</body>
 		</>
 	);
 };
