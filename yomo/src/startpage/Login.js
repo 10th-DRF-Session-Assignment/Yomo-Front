@@ -20,16 +20,12 @@ function Login() {
 					<button className="LoginBtn" onClick={LoginBtnClick}>
 						Login
 					</button>
-					<Link to="signup">회원가입</Link>
-					<Routes>
-						<Route path="/signup" element={<SignUp />} />
-					</Routes>
+
+					<Link to="/signup">회원가입</Link>
 				</div>
 			</div>
 		</>
 	);
 }
-
-Login();
 
 export default Login;
