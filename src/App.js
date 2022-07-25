@@ -10,6 +10,7 @@ import Friending from './board/Friending/Friending';
 import Start from './startpage/Start';
 import BoardWrite from './BoardWrite';
 import BoardEditor from './board/GroupBuying/BoardEditorBuying';
+import MyPage from './MyPage';
 
 const App = () => {
 
@@ -44,6 +45,7 @@ const App = () => {
 							<Route path="/sharing" element={<Sharing />} />
 							<Route path="/friending" element={<Friending />} />
 							<Route path="/write" element={<BoardEditor />} />
+							<Route path="/mypage" element={<MyPage />} />
 						</Routes>
 					</div>
 				</BrowserRouter>
