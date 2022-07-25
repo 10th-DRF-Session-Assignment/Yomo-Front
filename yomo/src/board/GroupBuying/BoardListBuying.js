@@ -42,6 +42,19 @@ function BoardListPost() {
 			});
 	};
 
+	// 게시글 수정하기
+	const Update = async () => {
+		const response = await axios
+			.put(`http://127.0.0.1:8000/b_pj_app/users/post/${id}/`)
+			.then(response => {
+				console.log('수정 성공', response.data);
+				setPosts([...response.data]);
+			})
+			.catch(error => {
+				console.log('글 하나 불러오기 실패');
+			});
+	};
+
 	// 게시글 삭제하기
 	const onDelete = id => {
 		axios
