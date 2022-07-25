@@ -18,7 +18,7 @@ function BoardListPost() {
 
 	const getPosts = async () => {
 		const response = await axios
-			.get('http://127.0.0.1:8000/b_pj_app/users/post/')
+			.get('http://127.0.0.1:8000/b_pj_app/post/')
 			.then(response => {
 				console.log('전체 글 불러오기 성공', response.data);
 				setPosts([...response.data]);
@@ -32,7 +32,7 @@ function BoardListPost() {
 	// 저희 단계에서 필요 없으면 삭제해도 될 듯 합니다
 	const getSinglePost = async () => {
 		const response = await axios
-			.get(`http://127.0.0.1:8000/b_pj_app/users/post/${id}/`)
+			.get(`http://127.0.0.1:8000/b_pj_app/post/${id}/`)
 			.then(response => {
 				console.log('글 하나 불러오기 성공', response.data);
 				setSinglePost(response.data);
