@@ -66,8 +66,8 @@ const StyledLink = styled(NavLink)`
 	box-sizing: border-box;
 	display: block;
 	padding: 4px 8px;
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 80px;
+	margin-right: 80px;
 	text-align: center;
 	text-decoration: none;
 	font-size: 20pt;
