@@ -21,7 +21,7 @@ export default function SignUp() {
 	);
 }
 
-const SignupInput = styled.input`
+export const SignupInput = styled.input`
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;

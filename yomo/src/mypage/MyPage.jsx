@@ -33,7 +33,7 @@ export const SchoolButton = styled.div`
 	padding: 9px;
 	font-size: 18pt;
 	color: #ffffff;
-	margin: 10% 1% 0 75%;
+	margin: 0% 1% 0 75%;
 `;
 
 export const UserImg = styled.div`

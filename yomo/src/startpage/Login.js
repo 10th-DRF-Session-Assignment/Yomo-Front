@@ -3,14 +3,15 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import App from '../App';
 import SignUp from './Signup';
+import { SignupInput } from './Signup';
 
 function Login() {
 	return (
 		<>
 			<YellowBody>
 				<Title>Login</Title>
-				<Loginbox>Username</Loginbox>
-				<Loginbox>Password</Loginbox>
+				<LoginInput type="text" placeholder="Username"></LoginInput>
+				<LoginInput type="text" placeholder="Password"></LoginInput>
 				<Loginbox>Google 계정으로 로그인</Loginbox>
 				<Link to="/groupbuying" style={{ textDecoration: 'none' }}>
 					<LoginBtn>Login</LoginBtn>
@@ -35,6 +36,24 @@ export const YellowBody = styled.body`
 	box-sizing: border-box;
 	height: 1024px;
 	width: 100%;
+`;
+
+export const LoginInput = styled.input`
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: block;
+	box-sizing: border-box;
+	width: 591px;
+	height: 76px;
+	border-radius: 50px;
+	text-align: center;
+	background-color: #fff1b8;
+	border-color: #000000;
+	border: 2px solid #000000;
+	padding: 25px;
+	font-size: 18pt;
+	margin: 25px auto;
 `;
 
 export const Loginbox = styled.div`
