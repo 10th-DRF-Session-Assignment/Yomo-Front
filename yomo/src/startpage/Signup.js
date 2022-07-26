@@ -6,19 +6,15 @@ import Login, { LoginBtn, SignupLink, Title } from './Login';
 import { YellowBody } from './Login';
 
 export default function SignUp() {
-	const SignUpBtnClick = () => {
-		document.location.href('/');
-	};
-
 	return (
 		<>
 			<YellowBody>
 				<Title>Sign Up</Title>
 				<SignupInput type="text" placeholder="Username"></SignupInput>
 				<SignupInput type="text" placeholder="Password"></SignupInput>
-				<LoginBtn style={{ marginTop: '100px' }} onClick={SignUpBtnClick}>
-					Sign Up
-				</LoginBtn>
+				<Link to="/groupbuying" style={{ textDecoration: 'none' }}>
+					<LoginBtn style={{ marginTop: '100px' }}>Sign Up</LoginBtn>
+				</Link>
 				<SignupLink to="/login">로그인 화면으로 돌아가기</SignupLink>
 			</YellowBody>
 		</>

@@ -3,24 +3,20 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import BoardList from './BoardListBuying.js';
 import BoardEditor from './BoardEditorBuying.js';
 import styled from 'styled-components';
-import writeButtonImg from '../../writeButton.png';
+import writeButtonImg from '../GroupBuying/writeButton.png';
+import BoardItem from './BoardItemBuying.js';
 
 export const BoardTitleDiv = styled.div`
-	position: absolute;
-	width: 1147px;
+	margin: 15px auto;
+	width: 80%;
 	height: 122px;
-	left: 146px;
-	top: 148px;
-
+	box-sizing: border-box;
 	background: #ffc3c3;
 `;
 
-export const BoardTitle = styled.span`
-	position: relative;
-	width: 675px;
-	height: 41px;
-	left: 381px;
-	top: 40px;
+export const BoardTitle = styled.div`
+	padding: auto;
+	/* text-align: center; */
 	font-size: 36px;
 	color: #000000;
 `;
@@ -54,13 +50,13 @@ export default function GroupBuying() {
 		<div>
 			<BoardTitleDiv>
 				<BoardTitle>기숙사 공구 게시판</BoardTitle>
+				<BoardItem />
 				<WriteButton>
 					<Link to="/write">
 						<img src={writeButtonImg} />
 					</Link>
 				</WriteButton>
 			</BoardTitleDiv>
-			{/* <BoardEditor onCreate={onCreate} /> */}
 			<BoardList boardList={data} />
 		</div>
 	);

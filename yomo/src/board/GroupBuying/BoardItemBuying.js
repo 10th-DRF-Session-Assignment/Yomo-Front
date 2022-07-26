@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import userImg from '../../userImg.png';
+import userImg from '../GroupBuying/userImg.png';
 
 export const WriteItem = styled.div`
 	position: relative;

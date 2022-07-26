@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import styled from 'styled-components';
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink, Link } from 'react-router-dom';
 import Login from './startpage/Login';
 import SignUp from './startpage/Signup';
+import NavUserImg from './image 6.svg';
+import LogoImg from './image 20.svg';
 
 export default function Header() {
 	return (
 		<div className="header">
 			<Navbar>
+				<img src={LogoImg} style={{ width: '35px' }} />
 				<StyledLink to="/" style={title} className="title">
 					YOMO
 				</StyledLink>
@@ -26,6 +29,12 @@ export default function Header() {
 				<StyledLink to="/Friending" style={boardname} className="boardname">
 					친구해요
 				</StyledLink>
+				<Link to="/mypage">
+					<img
+						src={NavUserImg}
+						style={{ marginLeft: '100px', width: '35px' }}
+					/>
+				</Link>
 				<StyledLink to="/login" style={login} className="login">
 					Login
 				</StyledLink>
@@ -38,14 +47,19 @@ export default function Header() {
 
 const title = {
 	color: '#F88908',
+	marginRight: '100px',
+	marginLeft: '10px',
 };
 
 const boardname = {
 	color: '#FF7272',
+	marginLeft: '100px',
+	marginRight: '100px',
 };
 
 const login = {
 	color: '#000000',
+	marginLeft: '10px',
 };
 
 const selected = {
@@ -65,7 +79,6 @@ export const Navbar = styled.div`
 const StyledLink = styled(NavLink)`
 	box-sizing: border-box;
 	display: block;
-	padding: 4px 8px;
 	margin-left: 80px;
 	margin-right: 80px;
 	text-align: center;

@@ -7,7 +7,9 @@ export default function Start() {
 	return (
 		<div>
 			<Body>
-				<Altbox>로그인을 먼저 진행해주세요</Altbox>
+				<Altbox>
+					<img></img> 로그인을 먼저 진행해주세요
+				</Altbox>
 				<Altbox>게시판은 학교 인증 후에 사용 가능합니다 </Altbox>
 			</Body>
 		</div>

@@ -5,10 +5,6 @@ import App from '../App';
 import SignUp from './Signup';
 
 function Login() {
-	const LoginBtnClick = () => {
-		document.location.href('/groupbuying.js');
-	};
-
 	return (
 		<>
 			<YellowBody>
@@ -16,7 +12,9 @@ function Login() {
 				<Loginbox>Username</Loginbox>
 				<Loginbox>Password</Loginbox>
 				<Loginbox>Google 계정으로 로그인</Loginbox>
-				<LoginBtn onClick={LoginBtnClick}>Login</LoginBtn>
+				<Link to="/groupbuying" style={{ textDecoration: 'none' }}>
+					<LoginBtn>Login</LoginBtn>
+				</Link>
 				<SignupLink to="/signup">회원가입</SignupLink>
 			</YellowBody>
 		</>
