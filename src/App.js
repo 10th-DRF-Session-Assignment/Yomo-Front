@@ -10,26 +10,25 @@ import Friending from './board/Friending/Friending';
 import Start from './startpage/Start';
 import BoardWrite from './BoardWrite';
 import BoardEditor from './board/GroupBuying/BoardEditorBuying';
-import MyPage from './MyPage';
+import MyPage from './mypage/MyPage';
 
 const App = () => {
+	const [data, setData] = useState([]);
 
-  const [data, setData] = useState([]);
+	const dataId = useRef(0);
 
-    const dataId = useRef(0)
-  
-    const onCreate = (author, content, space) => {
-      const created_date = new Date().getTime();
-      const newItem = {
-        author, 
-        content, 
-        space,
-        created_date,
-        id : dataId.current,
-      };
-      dataId.current += 1;
-      setData([newItem, ...data]);  
-    };
+	const onCreate = (author, content, space) => {
+		const created_date = new Date().getTime();
+		const newItem = {
+			author,
+			content,
+			space,
+			created_date,
+			id: dataId.current,
+		};
+		dataId.current += 1;
+		setData([newItem, ...data]);
+	};
 
 	return (
 		<>

@@ -1,15 +1,24 @@
 import styled from 'styled-components';
-import userImg from '../../userImg.png';
+import userImg from '../GroupBuying/userImg.png';
 
 export const WriteItem = styled.div`
 	position: relative;
-	width: 1142px;
-	left: 147px;
+	margin : auto;
+	width : 80%;
 	top: 100px;
 	border: 1px solid black;
 `;
 
 export const UserInfoDiv = styled.div``;
+
+
+export const Bbutton = styled.button`
+	float : right;
+	margin-right : 2%;
+	background-color : white;
+	width :  50px;
+	height : 50px;
+	`;
 
 export const UserImg = styled.span`
 	position: relative;

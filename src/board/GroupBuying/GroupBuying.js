@@ -1,55 +1,36 @@
 import React, { Component, useState, useRef } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import BoardList from './BoardListBuying.js';
+import BoardList from './BoardList.js';
 import BoardEditor from './BoardEditorBuying.js';
 import styled from 'styled-components';
-import writeButtonImg from '../../writeButton.png';
+import writeButtonImg from '../GroupBuying/writeButton.png';
+import { WriteItem } from '../../mypage/MyPageList.jsx';
 
 export const BoardTitleDiv = styled.div`
-	position: absolute;
-	width: 1147px;
+	margin: 15px auto;
+	width: 80%;
 	height: 122px;
-	left: 146px;
-	top: 148px;
-
+	box-sizing: border-box;
 	background: #ffc3c3;
 `;
 
-export const BoardTitle = styled.span`
-	position: relative;
-	width: 675px;
-	height: 41px;
-	left: 381px;
-	top: 40px;
+export const BoardTitle = styled.div`
+	padding: auto;
+	padding-top : 40px;
+	text-align: center;
 	font-size: 36px;
 	color: #000000;
 `;
 
 export const WriteButton = styled.div`
-	position: relative;
+position: relative;
+left: 1100px;
+top: -40px;
 	width: 50px;
 	height: 50px;
-	left: 1050px;
 `;
 
 export default function GroupBuying() {
-	const [data, setData] = useState([]);
-
-	const dataId = useRef(0);
-
-	const onCreate = (author, content, space) => {
-		const created_date = new Date().getTime();
-		const newItem = {
-			author,
-			content,
-			space,
-			created_date,
-			id: dataId.current,
-		};
-		dataId.current += 1;
-		setData([newItem, ...data]);
-	};
-
 	return (
 		<div>
 			<BoardTitleDiv>
@@ -60,8 +41,7 @@ export default function GroupBuying() {
 					</Link>
 				</WriteButton>
 			</BoardTitleDiv>
-			{/* <BoardEditor onCreate={onCreate} /> */}
-			<BoardList boardList={data} />
+			<BoardList />
 		</div>
 	);
 }
