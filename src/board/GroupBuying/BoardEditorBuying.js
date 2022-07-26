@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import BoardWrite from '../../BoardWrite.jsx';
 import axios from 'axios';
+import '../../App.css';
 
 // API 받아오는 부분입니다
 function BoardEdit() {
